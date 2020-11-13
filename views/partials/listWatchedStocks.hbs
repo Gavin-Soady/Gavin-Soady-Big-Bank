@@ -1,0 +1,25 @@
+
+{{#each stocks}}
+
+    <section class="ui segment">
+        <div class="ui grid">
+        <!---->
+                <div class = "twelve wide column">
+                    <a href="/showUser/{{id}}" methods="post" >
+                    <h2 class="ui header blue">{{name}}</h2>
+                    <h3 class="ui header black">Code: {{code}} </h3>
+                    <h3 class="ui header black">Price per share: {{price}} </h3>
+                    </a>
+                </div>
+
+                <div class = "four wide column right aligned middle aligned">
+                    <a href="/dashboard/unfollow/{{id}}" class="ui red button">
+                        Unfollow
+                    </a>
+                </div>
+        </div>
+
+    </section>
+
+{{/each}}
+

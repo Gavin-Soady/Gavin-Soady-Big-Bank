@@ -1,0 +1,53 @@
+{
+  "allStocksCollection": [
+    {
+      "id": "5a577bd0-ee18-11ea-886d-4dfdabebe4c2",
+      "userId": "e7907fa0-ede2-11ea-afeb-fbb111bfe9a6",
+      "name": "Apple",
+      "code": "APL",
+      "price": "500",
+      "following": false
+    },
+    {
+      "id": "66a19500-ee19-11ea-aaf6-f347f82b4013",
+      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
+      "name": "MicroSoft",
+      "code": "MST",
+      "price": "400",
+      "following": false
+    },
+    {
+      "id": "71e15f90-ee19-11ea-aaf6-f347f82b4013",
+      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
+      "name": "Oracle",
+      "code": "ORC",
+      "price": "600",
+      "following": false
+    },
+    {
+      "id": "75d86350-ee19-11ea-aaf6-f347f82b4013",
+      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
+      "name": "Hooli",
+      "code": "HLI",
+      "price": "200",
+      "following": false
+    },
+    {
+      "id": "cd309e10-ee19-11ea-947b-5940c5df4266",
+      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
+      "name": "Pied Piper",
+      "code": "PDP",
+      "price": "900",
+      "following": false
+    },
+    {
+      "id": "fdd5a8b0-24e9-11eb-8127-af699c6e7a7a",
+      "userId": "c2e30810-eddf-11ea-9e64-c3d5c06d8934",
+      "name": "Shipyard",
+      "code": "SPD",
+      "price": "1000",
+      "following": false
+    }
+
+  ]
+}

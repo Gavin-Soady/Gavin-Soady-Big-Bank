@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "firstName": "Amy",
+      "lastName": "Donohoe",
+      "email": "amyd415@gmail.com",
+      "password": "password",
+      "id": "c2e30810-eddf-11ea-9e64-c3d5c06d8934",
+      "numOfStocks": 0
+    },
+    {
+      "firstName": "Gavin",
+      "lastName": "Soady",
+      "gender": "Male",
+      "email": "gsoady20@gmail.com",
+      "password": "password",
+      "id": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "numOfStocks": 0
+    },
+    {
+      "firstName": "Gavin",
+      "lastName": "Soady",
+      "email": "gsoady20@gmail.com",
+      "password": "password",
+      "id": "f5e8edd0-24f6-11eb-8805-43c7d494a77c",
+      "numOfStocks": 0
+    },
+    {
+      "firstName": "John",
+      "lastName": "Johnson",
+      "email": "jj20@gmail.com",
+      "password": "password",
+      "id": "b847a8a0-24fa-11eb-aa8b-b97603e067c3"
+    }
+  ]
+}

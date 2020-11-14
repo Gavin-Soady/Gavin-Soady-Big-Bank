@@ -49,19 +49,56 @@
       "following": false
     },
     {
-      "id": "2c5e3900-2561-11eb-9787-77e9df1aa04a",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "id": "8badc2b0-2564-11eb-ac22-07cf220c2d7b",
+      "userId": "7efefed0-2564-11eb-ac22-07cf220c2d7b",
       "name": "Apple",
       "code": "APL",
       "price": "500",
       "following": false
     },
     {
-      "id": "2d0af3c0-2561-11eb-9787-77e9df1aa04a",
+      "id": "8e47f590-2564-11eb-ac22-07cf220c2d7b",
+      "userId": "7efefed0-2564-11eb-ac22-07cf220c2d7b",
+      "name": "MicroSoft",
+      "code": "MST",
+      "price": "400",
+      "following": false
+    },
+    {
+      "id": "15f5e780-2584-11eb-a1ca-5b960ebd7f98",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Apple",
+      "code": "APL",
+      "price": "500",
+      "following": true
+    },
+    {
+      "id": "1816a4a0-2584-11eb-a1ca-5b960ebd7f98",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
       "name": "MicroSoft",
       "code": "MST",
       "price": "400",
+      "following": false
+    },
+    {
+      "id": "ff778410-25f5-11eb-93d3-9d8f7543a9d7",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Seabridge Gold Inc.",
+      "code": "SA",
+      "price": "1.0000",
+      "following": false
+    },
+    {
+      "id": "55e209d0-25fe-11eb-b48a-dfe666e7f215",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "following": false
+    },
+    {
+      "id": "84ed5a80-267c-11eb-9d84-1733f1876598",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Domino's Pizza Inc.",
+      "code": "DPZ",
+      "price": "0.5000",
       "following": false
     }
   ]

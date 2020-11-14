@@ -7,11 +7,12 @@ const stocksStore = require("../models/stocks-store.js");
 const allStocks = require("../models/allStocks.js");
 const user = require("../models/user.js");
 const uuid = require("uuid");
+const fetch = require('node-fetch');
 
 
 const dashboard = {
   index(request, response) {
-    logger.info("dashboard rendering");
+    //logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: "Stocks List",
@@ -29,11 +30,14 @@ const dashboard = {
       };
    response.render("dashboard", viewData);
   },
-  showAllStocks(request, response){
-    const allStock = allStocks.getAllStocks();
+  async searchStocks(request, response){
+    let searchParam = request.body.search;
+    console.log("This is search Param:" + searchParam );
+    const result = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`);
+    const data = await result.json();
     const viewData = {
       title: "Stocks List",
-      stocks: allStock
+      stocks:data["bestMatches"]
     };
     response.render("showAllStocks", viewData);
   },
@@ -52,7 +56,7 @@ const dashboard = {
       userId: loggedInUser.id,
       name: request.params.name,
       code: request.params.code,
-      price: request.params.price,
+      price: request.params.matchScore,
       following: following
     };
     //logger.debug("Adding a new Stock", newStock);

@@ -2,32 +2,28 @@
 
 const _ = require("lodash");
 const jsonStore = require("./json-store");
-
+const https = require('https');
+const logger = require("../utils/logger");
+const fetch = require('node-fetch');
 
 const allStocks = {
   store: new jsonStore("./models/allStocks.json", { allStocksCollection: [] }),
   collection: "allStocksCollection",
 
-  getAllStocks() {
+  getAllStockss() {
     return this.store.findAll(this.collection);
   },
+  getAllStocks() {
 
-  getStock(id) {
-    return this.store.findOneBy(this.collection, { id: id });
-  },
-
-  getUserStocks(userId) {
-    return this.store.findBy(this.collection, { userId: userId });
-  },
-  addStock(stock) {
-    this.store.add(this.collection, stock);
-    this.store.save();
-  },
-  removeStock(id) {
-    const stock = this.getStock(id);
-    this.store.remove(this.collection, stock);
-    this.store.save();
+      return fetch('https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=SA&apikey=C34LLCPBG7XECGUG')
+        .then(res => res.json())
+        .then(json => {
+         // console.log("BestMatches:");
+          //console.log(json["bestMatches"]);
+          //search=json.bestMatches;
+        })
   }
+
 };
 
 module.exports = allStocks;

@@ -5,16 +5,14 @@
         <div class="ui grid">
             <!---->
             <div class = "twelve wide column">
-                <a href="/showUser/{{id}}" methods="post" >
-                    <h2 class="ui header blue">{{name}}</h2>
-                    <h3 class="ui header black">Code: {{code}} </h3>
-                    <h3 class="ui header black">Price per share: {{price}} </h3>
-                </a>
+                    <h2 class="ui header blue">{{'2. name'}}</h2>
+                    <h3 class="ui header black">Code: {{'1. symbol'}} </h3>
+                    <h3 class="ui header black">Price per share: {{'9. matchScore'}} </h3>
             </div>
 
             <div class = "four wide column right aligned middle aligned">
 
-                    <a href="/dashboard/follow/{{id}}/{{name}}/{{code}}/{{price}}" class="ui red button">
+                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}" class="ui red button">
                         Follow
                     </a>
 

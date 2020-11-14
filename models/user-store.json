@@ -31,6 +31,13 @@
       "email": "jj20@gmail.com",
       "password": "password",
       "id": "b847a8a0-24fa-11eb-aa8b-b97603e067c3"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Barnes",
+      "email": "jb@gmail.com",
+      "password": "password",
+      "id": "7efefed0-2564-11eb-ac22-07cf220c2d7b"
     }
   ]
 }

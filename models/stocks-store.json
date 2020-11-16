@@ -1,75 +1,95 @@
 {
   "stocksCollection": [
     {
-      "id": "5a577bd0-ee18-11ea-886d-4dfdabebe4c2",
-      "userId": "e7907fa0-ede2-11ea-afeb-fbb111bfe9a6",
-      "name": "Apple",
-      "code": "APL",
-      "price": "500",
-      "following": false
-    },
-    {
-      "id": "66a19500-ee19-11ea-aaf6-f347f82b4013",
-      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
-      "name": "MicroSoft",
-      "code": "MST",
-      "price": "400",
-      "following": false
-    },
-    {
-      "id": "71e15f90-ee19-11ea-aaf6-f347f82b4013",
-      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
-      "name": "Oracle",
-      "code": "ORC",
-      "price": "600",
-      "following": false
-    },
-    {
-      "id": "75d86350-ee19-11ea-aaf6-f347f82b4013",
-      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
-      "name": "Hooli",
-      "code": "HLI",
-      "price": "200",
-      "following": false
-    },
-    {
-      "id": "cd309e10-ee19-11ea-947b-5940c5df4266",
-      "userId": "9d057db0-ee18-11ea-886d-4dfdabebe4c2",
-      "name": "Pied Piper",
-      "code": "PDP",
-      "price": "900",
-      "following": false
-    },
-    {
-      "id": "fdd5a8b0-24e9-11eb-8127-af699c6e7a7a",
-      "userId": "c2e30810-eddf-11ea-9e64-c3d5c06d8934",
-      "name": "Shipyard",
-      "code": "SPD",
-      "price": "1000",
-      "following": false
-    },
-    {
-      "id": "8badc2b0-2564-11eb-ac22-07cf220c2d7b",
-      "userId": "7efefed0-2564-11eb-ac22-07cf220c2d7b",
-      "name": "Apple",
-      "code": "APL",
-      "price": "500",
-      "following": false
-    },
-    {
-      "id": "8e47f590-2564-11eb-ac22-07cf220c2d7b",
-      "userId": "7efefed0-2564-11eb-ac22-07cf220c2d7b",
-      "name": "MicroSoft",
-      "code": "MST",
-      "price": "400",
-      "following": false
-    },
-    {
-      "id": "c1b93d70-281c-11eb-99b9-83a8319e127e",
+      "id": "994e7320-2842-11eb-9148-db94f60671c1",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Seabridge Gold Inc.",
-      "code": "SA",
-      "price": "1.0000",
+      "name": "DoubleDown Interactive Co. Ltd.",
+      "code": "DDI",
+      "matchScore": "0.8000",
+      "marketOpen": "09:30",
+      "following": true
+    },
+    {
+      "id": "9a28cd90-2842-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Dow Inc.",
+      "code": "DOW",
+      "matchScore": "0.6667",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "9b47ab10-2842-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Dominion Energy Inc.",
+      "code": "D",
+      "matchScore": "0.6667",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "9c3f9fa0-2842-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "DocuSign Inc.",
+      "code": "DOCU",
+      "matchScore": "0.5714",
+      "marketOpen": "09:30",
+      "following": true
+    },
+    {
+      "id": "28295790-2843-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Alphabet Inc.",
+      "code": "GOOG",
+      "matchScore": "0.9091",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "29882440-2843-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Alphabet Inc.",
+      "code": "GOOGL",
+      "matchScore": "0.8000",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "8369f010-2843-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Domino's Pizza Inc.",
+      "code": "DPZ",
+      "matchScore": "0.5000",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "99119bc0-2843-11eb-9148-db94f60671c1",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Morgan Stanley Emerging Markets Domestic Debt Fund Inc.",
+      "code": "EDD",
+      "matchScore": "0.2857",
+      "marketOpen": "09:30",
+      "following": false
+    },
+    {
+      "id": "f8172b80-2843-11eb-b42e-7b5aaa5af89f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Old Dominion Freight Line Inc.",
+      "code": "ODFL",
+      "matchScore": "0.5000",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
+      "following": false
+    },
+    {
+      "id": "f8cf57f0-2843-11eb-b42e-7b5aaa5af89f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Domo Inc.",
+      "code": "DOMO",
+      "matchScore": "0.3333",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
       "following": false
     }
   ]

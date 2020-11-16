@@ -1,10 +1,16 @@
 {{> menu id="stocksList"}}
 <section class = "ui container">
+
+  {{#if showSearch}}
+    <br>
+    <br>
   <section class = "ui segment inverted raised" style="opacity: 0.9">
-    {{> searchStocks}}
     {{> listAllStocks}}
   </section>
-  <section class = "ui segment inverted raised" style="opacity: 0.95">
+    {{/if}}
+  <br>
+  <br>
+  <section class = "ui segment inverted raised" style="opacity: 0.9">
   <h1>{{user.firstName}}'s Stocks List</h1>
       {{>userStocks}}
   </section>

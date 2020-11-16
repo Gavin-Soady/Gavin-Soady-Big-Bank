@@ -14,7 +14,7 @@ router.get("/dashboard", dashboard.index);
 router.get("/dashboard/:search", dashboard.index);
 router.get("/dashboard/unfollow/:id", dashboard.unfollow);
 //router.get("/dashboard", dashboard.index);
-router.get("/dashboard/follow/:name/:code/:matchScore/:search", dashboard.follow);
+router.get("/dashboard/follow/:name/:code/:matchScore/:marketOpen/:marketClosed/:search", dashboard.follow);
 
 //post
 router.post("/register", accounts.register);

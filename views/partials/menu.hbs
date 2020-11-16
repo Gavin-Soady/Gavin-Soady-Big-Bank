@@ -1,9 +1,12 @@
 
 <nav class="ui inverted  menu"  >
     <header class="ui header item">  Big Bank Wealth Management System </header>
-    <header class="ui header ">   </header>
 
     <div class="right menu">
+      <section class = "ui segment basic" style="opacity: 0.9; width:50em;margin:auto; padding-right:6em">
+        {{> searchStocks}}
+      </section>
+
         <a id="dashboard1" class="item" href="/dashboard"> Stock Watch </a>
         <a id="logout" class="ui icon item" href="/logout"> Logout </a>
     </div>

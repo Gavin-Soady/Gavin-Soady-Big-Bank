@@ -22,18 +22,41 @@ const dashboard = {
     if(request.params.search){
       searchParam = request.params.search;
     }
-
     console.log("This is search Param:" + searchParam );
-    const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
-    const result = await fetch(url);
-    const data = await result.json();
-
+    let data=[];
+    let showSearch = false;
+    let userStocks = stocksStore.getUserStocks(loggedInUser.id).reverse();
+    try{
+      const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
+      const result = await fetch(url);
+      if(data["bestMatches"].length >0) {
+        showSearch = true;
+      }
+    if(data["bestMatches"].length > 0) {
+      for (let x = 0; x < data["bestMatches"].length; x++) {
+        for (let y = 0; y < userStocks.length; y++) {
+          if (data["bestMatches"][x]['1. symbol'] == userStocks[y].code) {
+            data["bestMatches"][x]['following'] = 'Following';
+            break;
+          }else{
+            data["bestMatches"][x]['following'] = 'Follow';
+          }
+        }
+      }
+    }
+   }
+    catch(err){
+        console.log(err.message);
+        console.log("Looks like you're out of API calls...");
+      }
+    console.log(data["bestMatches"]);
     const viewData = {
       title: "Dashboard",
       user: loggedInUser,
-      userStocks: stocksStore.getUserStocks(loggedInUser.id).reverse(),
+      userStocks: userStocks,
       stocks: data["bestMatches"],
-      search: searchParam
+      search: searchParam,
+      showSearch:showSearch
     };
     //logger.info(viewData.stocks);
     response.render("dashboard", viewData);
@@ -54,7 +77,9 @@ const dashboard = {
       userId: loggedInUser.id,
       name: request.params.name,
       code: request.params.code,
-      price: request.params.matchScore,
+      matchScore: request.params.matchScore,
+      marketOpen: request.params.marketOpen,
+      marketClosed: request.params.marketClosed,
       following: following
     };
     //logger.debug("Adding a new Stock", newStock);

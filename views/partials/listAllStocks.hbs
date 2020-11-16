@@ -1,4 +1,19 @@
-
+<section class="ui grid">
+  <div class = "twelve wide column left aligned middle aligned">
+    <h1> Search Results</h1>
+  </div>
+  <div class = "four wide column right aligned middle aligned">
+    <a><button id="clear" class="ui button" style="margin-right: 2em" > Clear &nbsp;</button></a>
+  </div>
+</section>
+<script type="text/javascript">
+  document.getElementById('search').value="";
+  $(document).ready(function() {
+    $("#clear").click(function() {
+      $("#searchForm").submit();
+    });
+  });
+</script>
 {{#each stocks}}
     <section class="ui raised segment" style="background-color: #f1f1f1">
         <div class="ui grid">
@@ -10,23 +25,19 @@
                 Code: {{'1. symbol'}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Price per share: {{'1. symbol'}}
+                Match Score: {{'9. matchScore'}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Code: {{'1. symbol'}}
+                Market Open: {{'5. marketOpen'}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Code: {{'1. symbol'}}
+                Market Close: {{'6. marketClose'}}
               </div>
             </div>
           </div>
             <div class = "four wide column right aligned middle aligned">
-                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}/{{../search}}" class="ui button">
-                      {{#if ../following }}
-                        Following
-                      {{else}}
-                        Follow
-                      {{/if}}
+                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}/{{'5. marketOpen'}}/{{'6. marketClose'}}/{{../search}}" class="ui button">
+                      {{following}}
                     </a>
             </div>
         </div>

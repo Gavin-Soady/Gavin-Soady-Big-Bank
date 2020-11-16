@@ -15,7 +15,14 @@ const dashboard = {
   async index(request, response) {
     //logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
-    let searchParam = request.body.search;
+    let searchParam;
+    if(request.body.search){
+      searchParam = request.body.search;
+    }
+    if(request.params.search){
+      searchParam = request.params.search;
+    }
+
     console.log("This is search Param:" + searchParam );
     const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
     const result = await fetch(url);
@@ -25,30 +32,11 @@ const dashboard = {
       title: "Dashboard",
       user: loggedInUser,
       userStocks: stocksStore.getUserStocks(loggedInUser.id).reverse(),
-      stocks: data["bestMatches"]
+      stocks: data["bestMatches"],
+      search: searchParam
     };
     //logger.info(viewData.stocks);
     response.render("dashboard", viewData);
-  },
-  showUser(request, response){
-    const viewData = {
-      title: "Dashboard",
-      user: user.getUserById(request.params.id),
-      stocks: stocksStore.getUserStocks(request.params.id).reverse()
-      };
-   response.render("dashboard", viewData);
-  },
-   async searchStocks(request, response){
-    let searchParam = request.body.search;
-    console.log("This is search Param:" + searchParam );
-    const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
-    const result = await fetch(url);
-    const data = await result.json();
-    const viewData = {
-      title: "Stocks List",
-      stocks: data["bestMatches"]
-    };
-    response.render("stocksList", viewData);
   },
   unfollow(request, response){
     //const loggedInUser = accounts.getCurrentUser(request);
@@ -58,6 +46,7 @@ const dashboard = {
     response.redirect("/dashboard/");
   },
   follow(request, response){
+    console.log(request.params.search);
     const loggedInUser = accounts.getCurrentUser(request);
     let following = false;
     const newStock = {
@@ -86,7 +75,7 @@ const dashboard = {
     }else{
       stocksStore.addStock(newStock);
     }
-    response.redirect("/dashboard");
+    response.redirect("/dashboard/"+request.params.search);
   },
 };
 

@@ -21,8 +21,12 @@
             </div>
           </div>
             <div class = "four wide column right aligned middle aligned">
-                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}" class="ui button">
+                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}/{{../search}}" class="ui button">
+                      {{#if ../following }}
+                        Following
+                      {{else}}
                         Follow
+                      {{/if}}
                     </a>
             </div>
         </div>

@@ -65,43 +65,11 @@
       "following": false
     },
     {
-      "id": "84ed5a80-267c-11eb-9d84-1733f1876598",
+      "id": "c1b93d70-281c-11eb-99b9-83a8319e127e",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Domino's Pizza Inc.",
-      "code": "DPZ",
-      "price": "0.5000",
-      "following": false
-    },
-    {
-      "id": "0e8e6f60-2798-11eb-9b79-37ffc9761a05",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Alphabet Inc.",
-      "code": "GOOG",
-      "price": "0.9091",
-      "following": true
-    },
-    {
-      "id": "3523a070-27a0-11eb-ad20-cfdeb9ffeeec",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "DoubleDown Interactive Co. Ltd.",
-      "code": "DDI",
-      "price": "0.8000",
-      "following": false
-    },
-    {
-      "id": "239ae420-27a6-11eb-8569-876a3590aa4f",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Facebook Inc.",
-      "code": "FB",
-      "price": "0.8889",
-      "following": false
-    },
-    {
-      "id": "2f9413a0-27a6-11eb-8569-876a3590aa4f",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Amazon.com Inc.",
-      "code": "AMZN",
-      "price": "0.8000",
+      "name": "Seabridge Gold Inc.",
+      "code": "SA",
+      "price": "1.0000",
       "following": false
     }
   ]

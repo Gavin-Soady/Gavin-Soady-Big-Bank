@@ -15,7 +15,7 @@ const accounts = {
     const viewData = {
       title: "Welcome to BigBank"
     };
-    response.render("login", viewData);
+    response.render("dashboard", viewData);
   },
   logout(request, response) {
     response.cookie("user", "");
@@ -39,35 +39,12 @@ const accounts = {
       response.cookie("playlist", userCheck.email);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/login");
+      response.redirect("/#login");
     }
   },
   getCurrentUser(request) {
     const userEmail = request.cookies.playlist;
     return user.getUserByEmail(userEmail);
-  },
-  loadSettingsPage(request,response){
-    const viewData = {
-      title: "Update settings",
-      user: user.getUserById(request.params.id)
-    };
-    response.render("settings", viewData);
-
-  },
-  updateSettings(request,response){
-
-    const updateUser = user.getUserByEmail(request.body.email);
-    updateUser.name = request.body.name;
-    logger.info(`logging in ${updateUser.name}`);
-    updateUser.gender = request.body.gender;
-    updateUser.email = request.body.email;
-    updateUser.password = request.body.password;
-    updateUser.address = request.body.address;
-    updateUser.height = request.body.height;
-    updateUser.startingWeight = request.body.startingWeight;
-
-     response.redirect("/dashboard");
-
   },
 };
 

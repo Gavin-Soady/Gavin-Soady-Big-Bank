@@ -1,9 +1,14 @@
 <form class="ui form" action="/search" method="POST">
   <div class="ui fluid action input" >
-     <input type="text" placeholder="Search..." name="search" style="z-index: 1; margin-right: -5px">
+    <input type="text" id="search" placeholder="Search..." name="search" value="{{value}}" style="z-index: 1; margin-right: -5px" >
     <a><button class="ui left attached submit button" style="z-index: 2">Search</button></a>
-    &nbsp;
-    <a href="/search"><button class="right attached ui button"> Clear &nbsp;</button></a>
+    <a><button onclick="clear()" class="right attached ui button" > Clear &nbsp;</button></a>
   </div>
-
 </form>
+<script>
+  function clear(){
+  let value = document.getElementById('search').value;
+  value="";
+    window.location=/search;
+  }
+</script>

@@ -11,9 +11,10 @@ router.get("/login", accounts.login);
 router.get("/signup", accounts.signup);
 router.get("/logout", accounts.logout);
 router.get("/dashboard", dashboard.index);
+router.get("/dashboard/:search", dashboard.index);
 router.get("/dashboard/unfollow/:id", dashboard.unfollow);
 //router.get("/dashboard", dashboard.index);
-router.get("/dashboard/follow/:name/:code/:matchScore", dashboard.follow);
+router.get("/dashboard/follow/:name/:code/:matchScore/:search", dashboard.follow);
 
 //post
 router.post("/register", accounts.register);

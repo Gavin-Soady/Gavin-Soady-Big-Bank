@@ -65,40 +65,43 @@
       "following": false
     },
     {
-      "id": "15f5e780-2584-11eb-a1ca-5b960ebd7f98",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Apple",
-      "code": "APL",
-      "price": "500",
-      "following": true
-    },
-    {
-      "id": "1816a4a0-2584-11eb-a1ca-5b960ebd7f98",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "MicroSoft",
-      "code": "MST",
-      "price": "400",
-      "following": false
-    },
-    {
-      "id": "ff778410-25f5-11eb-93d3-9d8f7543a9d7",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Seabridge Gold Inc.",
-      "code": "SA",
-      "price": "1.0000",
-      "following": false
-    },
-    {
-      "id": "55e209d0-25fe-11eb-b48a-dfe666e7f215",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "following": false
-    },
-    {
       "id": "84ed5a80-267c-11eb-9d84-1733f1876598",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
       "name": "Domino's Pizza Inc.",
       "code": "DPZ",
       "price": "0.5000",
+      "following": false
+    },
+    {
+      "id": "0e8e6f60-2798-11eb-9b79-37ffc9761a05",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Alphabet Inc.",
+      "code": "GOOG",
+      "price": "0.9091",
+      "following": true
+    },
+    {
+      "id": "3523a070-27a0-11eb-ad20-cfdeb9ffeeec",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "DoubleDown Interactive Co. Ltd.",
+      "code": "DDI",
+      "price": "0.8000",
+      "following": false
+    },
+    {
+      "id": "239ae420-27a6-11eb-8569-876a3590aa4f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Facebook Inc.",
+      "code": "FB",
+      "price": "0.8889",
+      "following": false
+    },
+    {
+      "id": "2f9413a0-27a6-11eb-8569-876a3590aa4f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Amazon.com Inc.",
+      "code": "AMZN",
+      "price": "0.8000",
       "following": false
     }
   ]

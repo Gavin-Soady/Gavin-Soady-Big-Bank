@@ -1,26 +1,34 @@
 "use strict";
 
 const accounts = require("./accounts.js");
-const _ = require("lodash");
+//const _ = require("lodash");
 const logger = require("../utils/logger");
 const stocksStore = require("../models/stocks-store.js");
-const allStocks = require("../models/allStocks.js");
+//const allStocks = require("../models/allStocks.js");
 const user = require("../models/user.js");
 const uuid = require("uuid");
 const fetch = require('node-fetch');
+const https = require('https');
 
 
 const dashboard = {
-  index(request, response) {
+  async index(request, response) {
     //logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
+    let searchParam = request.body.search;
+    console.log("This is search Param:" + searchParam );
+    const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
+    const result = await fetch(url);
+    const data = await result.json();
+
     const viewData = {
-      title: "Stocks List",
+      title: "Dashboard",
       user: loggedInUser,
-      stocks: stocksStore.getUserStocks(loggedInUser.id)
+      userStocks: stocksStore.getUserStocks(loggedInUser.id).reverse(),
+      stocks: data["bestMatches"]
     };
     //logger.info(viewData.stocks);
-    response.render("stocksList", viewData);
+    response.render("dashboard", viewData);
   },
   showUser(request, response){
     const viewData = {
@@ -30,16 +38,17 @@ const dashboard = {
       };
    response.render("dashboard", viewData);
   },
-  async searchStocks(request, response){
+   async searchStocks(request, response){
     let searchParam = request.body.search;
     console.log("This is search Param:" + searchParam );
-    const result = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`);
+    const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
+    const result = await fetch(url);
     const data = await result.json();
     const viewData = {
       title: "Stocks List",
-      stocks:data["bestMatches"]
+      stocks: data["bestMatches"]
     };
-    response.render("showAllStocks", viewData);
+    response.render("stocksList", viewData);
   },
   unfollow(request, response){
     //const loggedInUser = accounts.getCurrentUser(request);
@@ -71,13 +80,13 @@ const dashboard = {
           break;
         }
       }
-      if (following == false) {
+      if (following === false) {
         stocksStore.addStock(newStock);
       }
     }else{
       stocksStore.addStock(newStock);
     }
-    response.redirect("/dashboard/showallstocks");
+    response.redirect("/dashboard");
   },
 };
 

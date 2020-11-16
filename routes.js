@@ -12,12 +12,12 @@ router.get("/signup", accounts.signup);
 router.get("/logout", accounts.logout);
 router.get("/dashboard", dashboard.index);
 router.get("/dashboard/unfollow/:id", dashboard.unfollow);
-router.get("/dashboard/showallstocks", dashboard.searchStocks);
+//router.get("/dashboard", dashboard.index);
 router.get("/dashboard/follow/:name/:code/:matchScore", dashboard.follow);
 
 //post
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
-router.post("/search", dashboard.searchStocks);
+router.post("/search", dashboard.index);
 
 module.exports = router;

@@ -1,28 +1,28 @@
 
-{{#each stocks}}
+{{#each userStocks}}
     <section class="ui raised segment" style="background-color: #f1f1f1">
         <div class="ui grid">
             <!---->
           <div class = "twelve wide column" >
-            <h3 class="ui header ">{{'2. name'}}</h3>
+            <h3 class="ui header ">{{name}}</h3>
             <div class = "ui grid">
               <div class = "four wide column left aligned middle aligned">
-                Code: {{'1. symbol'}}
+                Code: {{code}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Price per share: {{'1. symbol'}}
+                Price per share: {{price}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Code: {{'1. symbol'}}
+                Code: {{code}}
               </div>
               <div class = "four wide column left aligned middle aligned">
-                Code: {{'1. symbol'}}
+                Code: {{code}}
               </div>
             </div>
           </div>
             <div class = "four wide column right aligned middle aligned">
-                    <a href="/dashboard/follow/{{'2. name'}}/{{'1. symbol'}}/{{'9. matchScore'}}" class="ui button">
-                        Follow
+                    <a href="/dashboard/unfollow/{{id}}" class="ui button">
+                        Unfollow
                     </a>
             </div>
         </div>

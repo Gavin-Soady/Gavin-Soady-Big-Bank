@@ -1,6 +1,9 @@
-<form class="ui segment form" action="/search" method="POST">
-  <div class="ui fluid action input">
-      <input type="text" placeholder="Search..." name="search">
-      <button class="ui submit button">Search</button>
+<form class="ui form" action="/search" method="POST">
+  <div class="ui fluid action input" >
+     <input type="text" placeholder="Search..." name="search" style="z-index: 1; margin-right: -5px">
+    <a><button class="ui left attached submit button" style="z-index: 2">Search</button></a>
+    &nbsp;
+    <a href="/search"><button class="right attached ui button"> Clear &nbsp;</button></a>
   </div>
+
 </form>

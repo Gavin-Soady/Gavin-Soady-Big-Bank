@@ -1,0 +1,11 @@
+{{> menu id="stocksList"}}
+<section class = "ui container">
+  <section class = "ui segment inverted raised" style="opacity: 0.9">
+    {{> searchStocks}}
+    {{> listAllStocks}}
+  </section>
+  <section class = "ui segment inverted raised" style="opacity: 0.95">
+  <h1>{{user.firstName}}'s Stocks List</h1>
+      {{>userStocks}}
+  </section>
+</section>

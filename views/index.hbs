@@ -1,20 +1,23 @@
-<section class="ui container">
-    {{> indexMenu id='login' }}
-
+{{> indexMenu id='login' }}
+<section class="ui container" >
     <script>
         $("#").addClass("active item");
     </script>
-    <div class="ui two column middle aligned grid basic segment">
-        <div class="column">
-            <h1 class="ui header">
-                Wealth Management program
-            </h1>
-            <p>
-                Welcome to BigBank Wealth Management program, track your stock portfolio
-            </p>
-        </div>
-        <div class="column">
-            <img class="ui image" src="https://g.foolcdn.com/editorial/images/598733/why-stock-is-up.jpg">
-        </div>
+  <section class="ui container" >
+    <br>
+    <div class="ui basic middle aligned segment">
+        {{> intro}}
     </div>
+  </section>
+  <section class="ui container">
+    <br>
+    <div class="ui two column grid basic middle aligned segment">
+      <div class="column" id="signup">
+        {{> signup}}
+      </div>
+      <div class="column" id="login">
+        {{> login}}
+      </div>
+    </div>
+  </section>
 </section>

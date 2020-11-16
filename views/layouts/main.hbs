@@ -9,15 +9,40 @@
       <link rel="stylesheet" type="text/css" href="../CSS/style.css">
       <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
   <style>
-      .bmi-format{
-          margin: -20em;
 
-      }
+    .ui.widget.backGround{
+      background-color: blue;
+    }
+    .ui.button{
+      background-color: #6aac0e;
+      color: white;
+      margin-right: 10px;
+      height: 3em;
+      z-index: 1;
+    }
+    .ui.menu{
+      height: 80px;
+      z-index: 0;
+    }
+    .ui.input{
+     z-index: 0;
+    }
+    body img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 80em;
+      opacity: 0.6;
+    }
+
+
 
   </style>
   </head>
-  <body>
-    <section class="ui container">
+  <body style="background-color:#f7f7f7;">
+  <img src="https://g.foolcdn.com/editorial/images/598733/why-stock-is-up.jpg">
+    <section class="ui section "  >
       {{{body}}}
     </section>
   </body>

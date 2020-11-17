@@ -31,7 +31,7 @@ const accounts = {
     const newUser = request.body;
     newUser.id = uuid.v1();
     user.addUser(newUser );
-    response.redirect("/");
+    response.redirect("/#login");
   },
   authenticate(request, response) {
     const userCheck = user.getUserByEmail(request.body.email);

@@ -1,5 +1,5 @@
 {{> menu id="stocksList"}}
-<section class = "ui container">
+<section class = "ui container" style="min-width:80%; min-height:60% ">
 
   {{#if showSearch}}
     <br>
@@ -7,6 +7,13 @@
   <section class = "ui segment inverted raised" style="opacity: 0.9">
     {{> listAllStocks}}
   </section>
+  {{/if}}
+  {{#if apiCallsDepleted}}
+    <br>
+    <br>
+    <section id="apiCall" class = "ui segment inverted raised" style="opacity: 0.9">
+      {{> apiCalls}}
+    </section>
     {{/if}}
   <br>
   <br>

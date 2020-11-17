@@ -1,0 +1,20 @@
+<section  class="ui grid">
+  <div class = "two wide column left aligned middle aligned">
+  </div>
+  <div class = "twelve wide column center aligned middle aligned">
+    <h1> OOOPs you have run out of API Calls!</h1>
+    <h1>Please call back tomorrow or subscribe to Premium for unlimited API Calls</h1>
+  </div>
+  <div class = "two wide column right aligned middle aligned">
+    <a><button id="clear2" class="ui button" style="margin-right: 2em" > Clear &nbsp;</button></a>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById('search').value="";
+    $(document).ready(function() {
+      $("#clear2").click(function() {
+        $("#apiCall").hide();
+      });
+    });
+  </script>
+</section>

@@ -23,41 +23,42 @@ const dashboard = {
       searchParam = request.params.search;
     }
     console.log("This is search Param:" + searchParam );
-    let data=[];
     let showSearch = false;
     let userStocks = stocksStore.getUserStocks(loggedInUser.id).reverse();
-    try{
-      const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
-      const result = await fetch(url);
-      if(data["bestMatches"].length >0) {
+    let apiCallsDepleted=false;
+    let buttonColour
+    const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${searchParam}&apikey=C34LLCPBG7XECGUG`;
+    const result = await fetch(url);
+    const data = await result.json();
+    if(data["bestMatches"].length >0) {
         showSearch = true;
-      }
+    }
     if(data["bestMatches"].length > 0) {
+      for (let z = 0; z < data["bestMatches"].length; z++) {
+        data["bestMatches"][z]['following'] = 'Follow';
+      }
       for (let x = 0; x < data["bestMatches"].length; x++) {
         for (let y = 0; y < userStocks.length; y++) {
           if (data["bestMatches"][x]['1. symbol'] == userStocks[y].code) {
             data["bestMatches"][x]['following'] = 'Following';
+            data["bestMatches"][x]['buttonColour'] = "grey";
             break;
-          }else{
-            data["bestMatches"][x]['following'] = 'Follow';
           }
         }
       }
     }
-   }
-    catch(err){
-        console.log(err.message);
-        console.log("Looks like you're out of API calls...");
-      }
-    console.log(data["bestMatches"]);
+    console.log("Call return: "+ data["bestMatches"]);
+    console.log("buttonColour: "+ buttonColour);
     const viewData = {
       title: "Dashboard",
       user: loggedInUser,
       userStocks: userStocks,
       stocks: data["bestMatches"],
       search: searchParam,
-      showSearch:showSearch
-    };
+      showSearch:showSearch,
+      apiCallsDepleted:apiCallsDepleted,
+      buttonColour: buttonColour
+  };
     //logger.info(viewData.stocks);
     response.render("dashboard", viewData);
   },

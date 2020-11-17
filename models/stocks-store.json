@@ -1,93 +1,71 @@
 {
   "stocksCollection": [
     {
-      "id": "994e7320-2842-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "DoubleDown Interactive Co. Ltd.",
-      "code": "DDI",
-      "matchScore": "0.8000",
-      "marketOpen": "09:30",
-      "following": true
-    },
-    {
-      "id": "9a28cd90-2842-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Dow Inc.",
-      "code": "DOW",
-      "matchScore": "0.6667",
-      "marketOpen": "09:30",
-      "following": false
-    },
-    {
-      "id": "9b47ab10-2842-11eb-9148-db94f60671c1",
+      "id": "40899980-28c5-11eb-9d54-e7112d25664f",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
       "name": "Dominion Energy Inc.",
       "code": "D",
-      "matchScore": "0.6667",
+      "matchScore": "0.8571",
       "marketOpen": "09:30",
+      "marketClosed": "16:00",
       "following": false
     },
     {
-      "id": "9c3f9fa0-2842-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "DocuSign Inc.",
-      "code": "DOCU",
-      "matchScore": "0.5714",
-      "marketOpen": "09:30",
-      "following": true
-    },
-    {
-      "id": "28295790-2843-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Alphabet Inc.",
-      "code": "GOOG",
-      "matchScore": "0.9091",
-      "marketOpen": "09:30",
-      "following": false
-    },
-    {
-      "id": "29882440-2843-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Alphabet Inc.",
-      "code": "GOOGL",
-      "matchScore": "0.8000",
-      "marketOpen": "09:30",
-      "following": false
-    },
-    {
-      "id": "8369f010-2843-11eb-9148-db94f60671c1",
+      "id": "42101270-28c5-11eb-9d54-e7112d25664f",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
       "name": "Domino's Pizza Inc.",
       "code": "DPZ",
-      "matchScore": "0.5000",
-      "marketOpen": "09:30",
-      "following": false
-    },
-    {
-      "id": "99119bc0-2843-11eb-9148-db94f60671c1",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Morgan Stanley Emerging Markets Domestic Debt Fund Inc.",
-      "code": "EDD",
-      "matchScore": "0.2857",
-      "marketOpen": "09:30",
-      "following": false
-    },
-    {
-      "id": "f8172b80-2843-11eb-b42e-7b5aaa5af89f",
-      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Old Dominion Freight Line Inc.",
-      "code": "ODFL",
       "matchScore": "0.5000",
       "marketOpen": "09:30",
       "marketClosed": "16:00",
       "following": false
     },
     {
-      "id": "f8cf57f0-2843-11eb-b42e-7b5aaa5af89f",
+      "id": "43e96650-28c5-11eb-9d54-e7112d25664f",
       "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
-      "name": "Domo Inc.",
-      "code": "DOMO",
-      "matchScore": "0.3333",
+      "name": "Domino's Pizza Enterprises Limited",
+      "code": "DMZPY",
+      "matchScore": "0.2857",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
+      "following": false
+    },
+    {
+      "id": "49c90030-28c5-11eb-9d54-e7112d25664f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Morgan Stanley Emerging Markets Domestic Debt Fund Inc.",
+      "code": "EDD",
+      "matchScore": "0.2857",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
+      "following": false
+    },
+    {
+      "id": "8c579660-28c9-11eb-9d54-e7112d25664f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Seabridge Gold Inc.",
+      "code": "SA",
+      "matchScore": "1.0000",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
+      "following": false
+    },
+    {
+      "id": "8eca4410-28c9-11eb-9d54-e7112d25664f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Sarissa Capital Acquisition Corporation",
+      "code": "SRSAU",
+      "matchScore": "0.6667",
+      "marketOpen": "09:30",
+      "marketClosed": "16:00",
+      "following": false
+    },
+    {
+      "id": "9134b460-28c9-11eb-9d54-e7112d25664f",
+      "userId": "ed602a70-ee23-11ea-ae06-4fbf7ef14354",
+      "name": "Spirit Airlines Inc.",
+      "code": "SAVE",
+      "matchScore": "0.6667",
       "marketOpen": "09:30",
       "marketClosed": "16:00",
       "following": false

@@ -17,8 +17,13 @@
     {{/if}}
   <br>
   <br>
+
   <section class = "ui segment inverted raised" style="opacity: 0.9">
+  {{#if userStocks}}
   <h1>{{user.firstName}}'s Stocks List</h1>
       {{>userStocks}}
+  {{else}}
+    {{>welcome}}
+  {{/if}}
   </section>
 </section>

@@ -11,6 +11,7 @@ Simply select the stocks you want to 'Follow' and 'Unfollow' the stocks you don'
  I don't think I made any trade offs 
  
  With more time I would have each stock being tracked expandable showing more information.
+ -Make the web application more responsive
  -Allow users to have favouties
  -Drag and drop to reorder
  -Reorder the stocks and alphabetically
